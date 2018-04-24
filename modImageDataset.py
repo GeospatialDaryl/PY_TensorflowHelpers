@@ -1,5 +1,7 @@
 #  Class for Image stuff
-#  `take` from :
+#       Daryl Van Dyke GeospatialDaryl@github.com
+##  `take` from :
+#  
 #https://stackoverflow.com/questions/7971618/python-return-first-n-keyvalue-pairs-from-dict
 from itertools import islice
 
@@ -37,5 +39,9 @@ class TF_ImageDataset:
             outKeys.append(key)
             outVals.append(newDict[key])
         return TF_ImageDataset(outKeys, outVals, datasetName)
+    
+    def n(self):
+        lenSamp = len(self.dictDS)
+        self.n = lenSamp
+        return lenSamp
             
-        
